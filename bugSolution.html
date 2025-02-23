@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    // Correct use of DOM manipulation for appending content
+    const newParagraph = document.createElement("p");
+    newParagraph.textContent = "New text";
+    document.getElementById("myDiv").insertBefore(newParagraph, document.getElementById("myDiv").firstChild);
+  </script>
+</body>
+</html>
